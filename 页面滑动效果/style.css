@@ -1,0 +1,64 @@
+.st-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: pink;
+    position: absolute;
+}
+.st-container > input,
+.st-container > a {
+    width: 20%;
+    height: 36px;
+    line-height: 36px;
+    position: absolute; 
+    bottom: 0;
+}
+.st-container > a {
+    z-index: 700;
+    background-color: skyblue;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.st-container > input {
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+}
+#input1,
+#input1 + a {
+    left: 0;
+}
+#input2,
+#input2 + a {
+    left: 20%;
+}
+#input3,
+#input3 + a {
+    left: 40%;
+}
+#input4,
+#input4 + a {
+    left: 60%;
+}
+#input5,
+#input5 + a {
+    left: 80%;
+}
+.st-container > input:checked + a{
+    background-color: #1E9FFF;
+}
+.st-container > input:checked + a:after {
+    content: " ";
+    display: block;
+    border: 12px solid transparent;
+    border-bottom-color: #1E9FFF;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
